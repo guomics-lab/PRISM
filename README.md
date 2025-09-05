@@ -1,7 +1,7 @@
 ./src/PRISM.sh --data-path data/Alzheimer.csv --device cuda --gpu-id 1
 # PRISM - Protein Data Imputation Framework
 
-PRISM is a deep learning framework for missing protein data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
+PRISM is a deep learning framework for missing protein data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Denoising Convolutional AutoEncoder)** methods.
 
 ## Features
 
@@ -50,7 +50,7 @@ pip install torch pytorch-lightning pandas numpy matplotlib seaborn tensorboard 
     --hidden-dims 512 256 128 \
     --embedding-dim 128 \
     --early-stopping \
-    --max-epochs 100
+    --max-epochs 1000
 ```
 
 ### Available Parameters
@@ -237,16 +237,6 @@ PRISM/
 
 ## Citation
 
-If you use PRISM in your research, please cite:
-
-```bibtex
-@software{prism2024,
-  title={PRISM: Protein Data Imputation Framework},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/PRISM}
-}
-```
 
 ## License
 
