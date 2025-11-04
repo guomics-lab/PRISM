@@ -1,4 +1,3 @@
-./src/PRISM.sh --data-path data/Alzheimer.csv --device cuda --gpu-id 1
 # PRISM - Protein Data Imputation Framework
 
 PRISM is a deep learning framework for missing protein data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
