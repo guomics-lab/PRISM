@@ -1,6 +1,6 @@
-# PRISM - Proteomic Data Imputation Framework
+# JINGWEI - Proteomic Data Imputation Framework
 
-PRISM is a deep learning framework for missing proteomic data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
+JINGWEI is a deep learning framework for missing proteomic data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
 
 ## Features
 
@@ -38,13 +38,13 @@ pip install torch pytorch-lightning pandas numpy matplotlib seaborn tensorboard 
 
 ```bash
 # Basic usage with DMF method
-./src/PRISM.sh --data-path data/your_dataset.csv
+./src/JINGWEI.sh --data-path data/your_dataset.csv
 
 # Use DCAE method with GPU 1
-./src/PRISM.sh --data-path data/Alzheimer.csv --method DCAE --device cuda --gpu-id 1
+./src/JINGWEI.sh --data-path data/Alzheimer.csv --method DCAE --device cuda --gpu-id 1
 
 # Custom parameters with early stopping
-./src/PRISM.sh --data-path data/your_dataset.csv \
+./src/JINGWEI.sh --data-path data/your_dataset.csv \
     --method DMF \
     --hidden-dims 512 256 128 \
     --embedding-dim 128 \
@@ -112,7 +112,7 @@ Sample_003,1.45,1.23,2.89,...
 
 ## Output Files
 
-PRISM generates the following outputs in the results directory:
+JINGWEI generates the following outputs in the results directory:
 
 ```
 results/
@@ -130,7 +130,7 @@ results/
 
 ### Example 1: DMF with Custom Architecture
 ```bash
-./src/PRISM.sh --data-path data/Alzheimer.csv \
+./src/JINGWEI.sh --data-path data/Alzheimer.csv \
     --method DMF \
     --hidden-dims 512 256 128 64 \
     --embedding-dim 128 \
@@ -143,7 +143,7 @@ results/
 
 ### Example 2: DCAE with GPU Acceleration
 ```bash
-./src/PRISM.sh --data-path data/Alzheimer.csv \
+./src/JINGWEI.sh --data-path data/Alzheimer.csv \
     --method DCAE \
     --device cuda \
     --gpu-id 1 \
@@ -156,7 +156,7 @@ results/
 
 ### Example 3: CPU Training with Custom Output Directory
 ```bash
-./src/PRISM.sh --data-path data/Alzheimer.csv \
+./src/JINGWEI.sh --data-path data/Alzheimer.csv \
     --device cpu \
     --results-dir ./my_results \
     --max-epochs 50 \
@@ -213,17 +213,17 @@ Monitor the following metrics:
 
 For help with parameters:
 ```bash
-./src/PRISM.sh --help
+./src/JINGWEI.sh --help
 ```
 
 ## File Structure
 
 ```
-PRISM/
+JINGWEI/
 ├── README.md
 ├── requirements.txt
 ├── src/
-│   ├── PRISM.sh              # Main training script
+│   ├── JINGWEI.sh              # Main training script
 │   ├── train.py              # Python training interface
 │   ├── datasets.py           # Data loading utilities
 │   ├── models.py             # Model architectures
@@ -236,14 +236,14 @@ PRISM/
 
 ## Citation
 
-If you use PRISM in your research, please cite:
+If you use JINGWEI in your research, please cite:
 
 ```bibtex
-@software{prism2024,
-  title={PRISM: Protein Data Imputation Framework},
+@software{JINGWEI2024,
+  title={JINGWEI: Protein Data Imputation Framework},
   author={Your Name},
   year={2024},
-  url={https://github.com/yourusername/PRISM}
+  url={https://github.com/yourusername/JINGWEI}
 }
 ```
 
