@@ -1,6 +1,6 @@
-# PRISM - Protein Data Imputation Framework
+# PRISM - Proteomic Data Imputation Framework
 
-PRISM is a deep learning framework for missing protein data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
+PRISM is a deep learning framework for missing proteomic data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
 
 ## Features
 
