@@ -11,7 +11,7 @@ import sys
 import time
 
 sys.path.append(str(Path(__file__).parent.parent))
-from src.methods.DMF import DMFImputer
+from methods.DMF import DMFImputer
 from src.methods.DCAE import DCAEImputer
 from src.datasets import CSVDataset
 

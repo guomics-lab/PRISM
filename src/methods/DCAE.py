@@ -49,30 +49,24 @@ class DCAEImputer(pl.LightningModule):
         )
     
     def training_step(self, batch, batch_idx):
-        input_batch, target_batch, mask_batch = batch  
-        loss_points = (target_batch != 0)
-        x_tilde, predicted_mask_logits = self.model(input_batch)
-        recon_loss = F.mse_loss(
-                x_tilde[loss_points],
-                target_batch[loss_points]
-            )
+        input_batch, target_batch, mask_batch = batch
+        observed = mask_batch > 0.5  
+        x_recon, mask_logits = self.model(input_batch)
 
-        if self.lambda_mask > 0:
-            true_mask = (target_batch != 0).float()
-            mask_loss = F.binary_cross_entropy_with_logits(
-                predicted_mask_logits, 
-                true_mask
-            )
+        if observed.any():
+            recon_loss = F.mse_loss(x_recon[observed], target_batch[observed])
         else:
-            mask_loss = torch.tensor(0.0, device=self.device)
-            
-        total_loss = recon_loss + self.lambda_mask * mask_loss 
+            recon_loss = torch.zeros([], device=self.device)
 
-        self.log("train/loss", total_loss, on_epoch=True, prog_bar=True)
-        self.log("train/recon_loss", recon_loss, on_epoch=True) 
         if self.lambda_mask > 0:
-            self.log("train/mask_loss", mask_loss, on_epoch=True) 
-        return total_loss
+            mask_loss = F.binary_cross_entropy_with_logits(mask_logits, mask_batch.float())
+        else:
+            mask_loss = torch.zeros([], device=self.device)
+
+        loss = recon_loss + self.lambda_mask * mask_loss
+        self.log_dict({"train/loss": loss, "train/recon": recon_loss, "train/mask": mask_loss},
+                      on_epoch=True, prog_bar=False, logger=True)
+        return loss
 
     def configure_optimizers(self):
         optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.learning_rate, weight_decay=1e-5)        
