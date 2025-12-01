@@ -234,18 +234,6 @@ JINGWEI/
     └── your_datasets.csv
 ```
 
-## Citation
-
-If you use JINGWEI in your research, please cite:
-
-```bibtex
-@software{JINGWEI2024,
-  title={JINGWEI: Protein Data Imputation Framework},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/JINGWEI}
-}
-```
 
 ## License
 
