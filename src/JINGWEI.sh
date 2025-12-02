@@ -1,7 +1,7 @@
 #!/bin/bash
-# filepath: /home/lizhaoxing/PRISM/src/PRISM.sh
+# filepath: /home/lizhaoxing/JINGWEI/src/JINGWEI.sh
 
-# PRISM Training Script
+# JINGWEI Training Script
 # Supports DMF and DCAE imputation methods
 
 # Set default values
@@ -31,7 +31,7 @@ GPU_ID=""
 # Display help information
 show_help() {
     cat << EOF
-PRISM Training Script - Supports DMF and DCAE imputation methods
+JINGWEI Training Script - Supports DMF and DCAE imputation methods
 
 Usage:
     $0 --data-path <path> [options]
@@ -261,7 +261,7 @@ fi
 
 # Display training configuration
 echo "================================"
-echo "PRISM Training Configuration"
+echo "JINGWEI Training Configuration"
 echo "================================"
 echo "Method: $METHOD"
 echo "Data Path: $DATA_PATH"
