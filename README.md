@@ -15,8 +15,9 @@ JINGWEI is a deep learning framework for missing proteomic data imputation, supp
 
 ### Requirements
 
-- Python 3.12+
+- Python 3.12
 - CUDA-capable GPU (optional, but recommended)
+
 It is recommended to use conda to manage the environment.
 ```bash
 conda create -n jingwei python=3.12
