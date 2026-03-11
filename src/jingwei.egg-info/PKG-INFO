@@ -3,16 +3,16 @@ Name: jingwei
 Version: 0.0.1
 Summary: Proteomic data imputation framework with DMF and DCAE methods.
 Author: JINGWEI Contributors
-License: MIT
+License: PolyForm Noncommercial 1.0.0
 Keywords: imputation,proteomics,DMF,DCAE,deep-learning
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Science/Research
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Requires-Python: >=3.12
+Project-URL: License, https://polyformproject.org/licenses/noncommercial/1.0.0/
 Description-Content-Type: text/markdown
 Requires-Dist: torch>=2.0.0
 Requires-Dist: pytorch-lightning>=2.0.0
@@ -314,7 +314,7 @@ JINGWEI/
 
 ## License
 
-This project is licensed under the MIT License 
+This project is licensed under the [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/).
 
 
 ## Changelog

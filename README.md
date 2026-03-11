@@ -294,7 +294,7 @@ JINGWEI/
 
 ## License
 
-This project is licensed under the MIT License 
+This project is licensed under the [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/).
 
 
 ## Changelog
