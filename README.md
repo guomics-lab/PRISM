@@ -1,3 +1,5 @@
+![JINGWEI logo](./figures/Jingwei_logo.png)
+
 # JINGWEI - Proteomic Data Imputation Framework
 
 JINGWEI is a deep learning framework for missing proteomic data imputation, supporting both **DMF (Deep Matrix Factorization)** and **DCAE (Dilated Convolutional AutoEncoder)** methods.
